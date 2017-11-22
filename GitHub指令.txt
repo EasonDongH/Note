@@ -1,0 +1,45 @@
+git查看版本：
+cd到项目文件夹→git log
+
+回到某一版本：
+git checkout commitID
+
+回到最新版本：
+git reset --hard → git pull(防止版本冲突)→git checkout master
+
+clone代码库：
+cd到项目文件夹→ git clone URL
+
+更新代码库：
+right check→commit(英文备注changes)→pull(代码冲突)→push
+更新之后本地代码出现与代码库不同处的提示，手动修改后，再次commit→push
+
+查看当前文件指向的github地址：
+git remote -v
+
+查看commit记录：
+git log
+
+查看git状态：
+git status
+
+查看远程分支名：
+git remote -v
+
+查看本地分支名：
+git branch
+
+添加修改信息：
+git add .
+
+commit:
+git commit -m "此处写内容"
+
+push:
+git push [远程分支名 origin] [本地分支名 master]
+
+push不上去：
+经检查是因为用了"git checkout"回到了历史版本，从而创建了一个分支，每次commit都在上传到该分支（HEAD betached 一串字符串），而不是master分支，
+因此github上看不到更新。解决方案：git checkout master  回到主分支
+
+ 
